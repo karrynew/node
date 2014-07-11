@@ -1,0 +1,26 @@
+	.bottomBg .lefe , .bottomBg .right {
+		width:8px;
+	}
+	.bottomBg{
+		height:47px;
+	}
+	.bottomBg .leftsmall{
+		height:41px;
+		width: 33px;
+		left:30px;
+	}
+	.bottomBg .smallcircle{
+		bottom:23px 
+	}
+	.bottomBg .rightsmall{
+		height:106px;
+		right:14px;
+		width:80px;
+	}
+	.opacitybgs{
+		height:37px;
+		bottom:47px;
+	}
+	.bottomBg .smallcircle{
+		background-size: 80px 164px;
+	}

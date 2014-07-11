@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="Author" contect="小莫(liyu)" /> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name=”apple-mobile-web-app-capable” content=”yes” />    
+<meta name=”apple-mobile-web-app-status-bar-style” content=black” / >    
+<meta content="black" name="apple-mobile-web-app-status-bar-style" />        
+<meta content="telephone=no" name="format-detection" />      
+<meta id="viewport" name="viewport" content="width=device-width; initial-scale=1.0;maximum-scale=1.0; user-scalable=no;"/>
+<title>love</title>
+</head>
+<script type="text/javascript" src="Raphael.js"></script>
+<body>
+    <div id="canvas">
+        <img id="rotate" class="none items" width="292" height="269" src="image/rotate.png" />
+        <img id="fuzz" class="none fuzz" width="136" height="113" src="image/fuzz.png" /><!-- 桃子 -->
+        <img id="fuzzs" class="none fuzz" width="127" height="104" src="image/fuzzs.png" /><!-- 桃子 -->
+        <img id="gong" class="none"  width="215" height="107" src="image/gong.png" /><!-- 拱 -->
+        <img id="shSword" class="none" width="152" height="243" src="image/shSword.png" /><!-- 射出去的剑 -->
+        <img id="light" class="none items" width="165" height="758" src="image/light.png" /><!-- 射出去的剑 -->
+        <img id="sword" class="none items" width="27" height="283" src="image/sword.png" /><!-- 剑 -->
+        <img id="cicles" class="none items" width="90" height="90" src="image/cicles.png" /><!-- 圆圈点击 -->
+    </div>
+    <div class="bottombg" id="bottombg">
+        <div class="opacitybgs"></div>
+        <div class="bottomBg">
+            <i class="lefe downimage"></i>
+            <i class="middle downimage"></i>
+            <i class="right downimage"></i>
+            <i class="leftsmall smallcircle"></i>
+            <i class="rightsmall smallcircle"></i>
+        </div>
+    </div>
+</body>
+</html>
+<script type="text/javascript">
+
+window.onload=function(){
+    LoveAtFirstSight({box:'canvas',success:function(a){
+        window.alert('射中了！');
+    },fail:function(a){
+        window.alert('木射中！');
+    }});
+};
+
+</script>

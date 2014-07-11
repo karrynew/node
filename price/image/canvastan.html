@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>rotate</title>
+    <meta charset="utf-8"/>
+</head>
+<style type="text/css">
+*{ padding: 0; margin: 0;}
+html,body{ height: 100%; width: 100%;}
+#canvas{ position: absolute; left: 0; top: 0}
+</style>
+<body>
+	<canvas id="canvas"></canvas>
+
+</body>
+</html>
+<script type="text/javascript">
+
+var canvas=document.getElementById('canvas');
+var ctx=canvas.getContext('2d');
+canvas.width=document.documentElement.clientWidth
+canvas.height=document.documentElement.clientHeight;
+var angel=((Math.PI*2)/360)*68;//68度
+imgLoad("sword_bg.png",function(a,b,c){
+	ctx.save();
+	ctx.translate(888,277)
+	ctx.rotate(angel);
+	ctx.drawImage(c,0,0,a,b);
+	ctx.restore();
+})
+
+
+function runs(){
+	imgLoad("sword_bg.png",function(a,b,c){
+		ctx.clearRect(0,0,canvas.width,canvas.height)
+		ctx.save();
+		//ctx.translate(Math.sin(angel)*2,Math.cos(angel)*2)这个就是坐标点（要改这个）
+		ctx.rotate(angel);
+		ctx.drawImage(c,0,0,a,b);
+		ctx.restore();
+	})
+}
+
+window.setInterval(function(){
+	//runs();
+},800)
+
+
+
+
+function imgLoad(url, callback) {
+	var img = new Image();
+	img.src = url;
+	if (img.complete) {
+		callback(img.width, img.height,img);
+	} else {
+		img.onload = function () {
+			callback.call(this,img.width, img.height,img);  
+			img.onload = null;
+		};
+	};
+};
+</script>

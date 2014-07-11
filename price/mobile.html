@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="Author" contect="小莫(liyu)" /> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name=”apple-mobile-web-app-capable” content=”yes” />    
+<meta name=”apple-mobile-web-app-status-bar-style” content=black” / >    
+<meta content="black" name="apple-mobile-web-app-status-bar-style" />        
+<meta content="telephone=no" name="format-detection" />      
+<meta id="viewport" name="viewport" content="width=device-width; initial-scale=1.0;maximum-scale=1.0; user-scalable=no;"/>
+<title>love</title>
+</head>
+<style type="text/css">
+*{ margin:0; padding:0}
+html,body,#canvas{ height:100%; width:100%; }
+.overlay{height:100%; width:100%; background-color:#000; opacity:0.3;filter:alpha(opacity=30); position:absolute; left:0; top:0; }
+.fanybox{ position:absolute;  height:176px; border:10px solid #5fb6ee; border-radius:10px;  background-color:#fff; 
+}
+.title{ height: 41px;background-color: #2c92d2; margin-bottom: 7px;width: 264px; border-radius: 10px; line-height: 41px; text-align: center; color: #fff; position: relative;padding-right:20px;}
+.fanyboxContain .icons ins{ position:absolute;left: -13px; top:41px; width:72px; height:70px; background-position:0 0;z-index:33}
+.fanyboxContain .icons i{position:absolute; right:-24px; bottom:-54px; width:100px; height:175px; background-position:12px -119px; z-index:33}
+.fanyboxContain .image{ background-image:url(image/allbgs.png); background-repeat:no-repeat;  background-size: 395px 600px; }
+
+
+ .pity{  font-size:18px;  color:#4f4f4f;}
+ .pity .words{ margin-top:5px; margin-bottom:0px; font-size: 13px;}
+ .pity .words a{ font-size:13px; color:#5FB6EE; text-decoration:none; font-weight: bolder;}
+ .pity .btn a{ display:inline-block; width:190px; height:37px; background-color:#07a0df;background-position:202px -279px; 
+font-size:16px; color:#fff; text-decoration:none;  line-height:37px;}
+ .pity .btn i{ width:11px; height:19px; }
+ .pity .btn{ margin-bottom:21px;}
+ .pity .luck{ font-size: 13px;}
+ .pity .picture{ height:162px; width:204px; position:absolute; background-position:0 -832px; right:43px; top:32px; z-index:0;}
+
+ .center{  margin-left:0 !important;} 
+ .pity .lucks{  font-size:16px;color:#07a0df}
+ .pity .wordes{  margin-bottom:25px; font-size:26px;}
+
+ .order{ position:relative}
+ .order,.fanybox .contain{ margin:0 auto;}
+ .order h3{ padding-top:44px; margin-bottom:49px;color:#5fb6ee;font-size:33px; text-align:center;background-position:66px -150px;}
+ .order input{ height: 25px;  background-color:#b7b7b7; border:none;width:221px; text-indent:10px; line-height:25px;}
+ input.first{margin-bottom:8px;}
+ .btn{ margin-top:15px;}
+ .btn a{ display:inline-block; width:221px; height:36px;background-color:#07a0df;background-position:202px -279px;font-size:16px; color:#fff; text-indent:10px;
+text-decoration:none; line-height:36px;}
+
+ .btn a:first-child{ margin-bottom: 7px;}
+					
+ .congratulate h3{ padding-top:30px; margin-bottom:30px; font-size:33px; color:#f06691;}
+ .congratulate .word{ color:#505050; font-size:16px;}		
+ .congratulate .keyword{ font-weight:bold; font-size:14px; color:#07a0df;}	
+ .congratulate .keyword span{ font-size:15px;}
+ .congratulate .inform{ margin-top:20px; margin-bottom:14px;font-size:14px;}
+ .congratulate input{ height: 25px; background-color:#b7b7b7; border:none; text-indent:20px; line-height:25px;    width: 221px; }
+.left a{ text-indent:20px; text-align:left !important}
+ .congratulate .btn{ margin-top:18px;}
+ .congratulate .diff{ background-color:#606060; color:#fff;}
+
+ .send,.fanybox .congratulate{ position:relative; z-index:12;}
+ .send h3{ margin-bottom:0px; font-size:13px; color:#3f3f3f; }
+ .send h3 span{ color:#07a0df;}
+ .send .word{ font-size:13px; margin-top: 10px; margin-bottom: 5px;}
+ .send .inform{  margin-bottom:10px; color:#505050; font-size:13px;}
+ .send .btn{ margin-left:0 !important; }
+ .send .btn a{ display:inline-block; width:221px; height:35px; background-color:#07a0df;background-position:202px -279px;
+font-size:16px; color:#fff; text-decoration:none;  line-height:35px;}
+
+.paddings{ padding-left: 29px; padding-top: 32px;}
+.othersize{margin-top:-212px; height:378px !important;  margin-top: -189px !important}
+ .bad{ background-position:251px -703px; position:relative; padding-top: 32px;}
+ .bads{ background-position:328px -703px;position:relative;}
+ .best{ background-position:329px -1050px; height: 278px;}
+ .opacitybg{position:absolute;left:0; top:98px; width:100%; height:234px; background-color:#f0edea; z-index:0;}
+.fanyboxContain{ height: 274px; width: 284px;left:50%; top:50%; margin-left: -142px; margin-top: -137px; position: absolute;    -webkit-transition:all 600ms ease-in-out 0s;
+    -moz-transition:all 600ms ease-in-out 0s;
+    -ms-transition:all 600ms ease-in-out 0s;
+    -o-transition:all 600ms ease-in-out 0s;
+    transition:all 600ms ease-in-out 0s;}
+.full{ height: 274px;}
+.fanyboxContain .pitysContain .title{ text-align: right;}
+.fanyboxContain .pitysContain .title i{ background-image: url(image/autos.png); background-size: 150px 81px; width: 150px; height: 81px; position: absolute; left: 20px; top:-32px;}
+.none{ display: none;}
+.othersize  .icons i{ background-position: 13px -118px;    bottom: 51px !important;  
+    transform: translate(0px, 100px);-webkit-transform: translate(0px, 100px);-moz-transform: translate(0px, 100px);}
+/*关闭的按钮的样式*/
+.fanyboxContain .closed{ width: 28px; height: 30px; position: absolute; top: 47px; right: 0px; background-position: 0px -321px; cursor: pointer; z-index: 44;}
+</style>
+<body>
+	<div class="overlay"></div>
+    <div class="fanyboxContain">
+<!--         <div class="fanybox"> -->
+        	<div class="icons">
+            	<ins class="image"></ins>
+            	<i class="image"></i>
+            </div>
+            <!--  <div class="opacitybg"></div> -->
+            <!--start遗憾1-->
+            <div class="full none pityContain">
+                <div class="title">很遗憾！您没有中奖</div>
+                <div class="pity image bad fanybox paddings" >
+                    <p class="words">您可以点击<a href="#">预约试驾</a>按钮，</p>
+                    <p class="words">获取<a href="#">再次抽奖机会!</a></p>
+                    <div class="btn">
+                        <a class="image" href="#">
+                        	预约试驾
+                        </a>
+                    </div>
+                    <p class="luck">再试试运气，弥补一下受伤的心脏！</p>
+               </div>
+            </div>
+           <!--end遗憾1-->
+           <!--start预约试驾-->
+           <div class="full  pitysContain">
+                <div class="title"><i></i>预约试驾</div>
+                <div class="order fanybox paddings">
+                   <input  class="first" type="text"  placeholder="填写姓名" />
+                   <input type="text"  placeholder="填写手机号码" />
+                   <div class="btn">
+                        <a class="image" href="#">
+                            立即申请
+                        </a>
+                        <a class="image" href="#">
+                            立即抽奖
+                        </a>
+                   </div>
+               </div>
+           </div>
+            <!--end预约试驾-->
+            <!--start遗憾2-->
+            <div class="full none pityesContain">
+                <div class="title">很遗憾！</div>
+                <div class="pity center  bads fanybox paddings" >
+                    <p class="wordes">您没有中奖</p>
+                    <div class="btn center">
+                        <a class="image center" href="#">
+                            预约试驾
+                        </a>
+                    </div>
+                    <p class="lucks">明天再接再厉吧！</p>
+                    <!--<div class="image picture"></div>-->
+                </div>
+            </div>
+            <!--end遗憾2-->
+            <!--start恭喜--><!-- 如果你要让这个恭喜层显示的话 那么 <div class="fanyboxContain">这个父元素要加上othersize这个class ,其他层则除掉othersize-->
+            <div class="none congratulateContain"> 
+                <div class="title">恭喜你！</div>
+                <div class="congratulate image best fanybox paddings" >
+                    <div class="contain">
+                        <p class="word">你获得了<span>雪佛兰购车款</span></p>
+                        <p class="keyword"><span>520</span>(我爱你)兑换金券一张</p>
+                        <p class="inform">请填写以下信息，以便我们联系您</p>
+                        <input  class="first" type="text"  placeholder="填写姓名" />
+                        <input type="text"  placeholder="填写手机号码" />
+                        <div class="btn left">
+                            <a class="image" href="#">
+                                提交
+                            </a>
+                            <a class="image diff" href="#">
+                                重填
+                            </a>
+                       </div>
+                    </div>
+                </div>
+            </div>
+            <!--end恭喜-->
+            <!--start发送-->
+            <div class="full sendContain none">
+                <div class="title sendContain">发送成功！</div>
+                <span class="closed image"></span>
+                <div class="send fanybox paddings" >
+                    <h3 class="center">已向<span>137XXXXXX44</span>此号码</h3>
+                    <p class="word">发送获奖密码短信</p>
+                    <p class="inform">如果你在1分钟内没有收到获取密码</p>
+                    <p class="inform">请<a href="#">重新获取</a>密码</p>
+                    <div class="btn">
+                        <a class="image" href="#">
+                            立即分享
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!--end发送-->
+       <!--  </div> -->
+    </div>
+</body>
+</html>
